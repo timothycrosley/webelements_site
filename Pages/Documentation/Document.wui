@@ -1,0 +1,11 @@
+flow
+ stack@display
+  vertical
+   center
+    > headerlabel text="WebElement's API Documentation" style="padding-top: 20px; padding-bottom: 20px;"
+   center
+    paragraph
+     > freetext text="WebElement's is a collection of several Factories that each contain several individual elements. This allows putting elements together into logical groupings, and allows for thrid-parties to build new factories for the WebElement framework - that can easily be plugged in to existing projects."
+   center
+    > headerlabel style="padding: 20px; font-weight: bold;" level=5 text="&lt; Browse through the element factories  for more in-depth documentation."
+  > vertical#openDocument

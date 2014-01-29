@@ -1,0 +1,177 @@
+vertical
+ tabcontainer
+  tab#helloWorldTab text="Hello World"
+   vertical.StartPage
+    center
+     > headerlabel text="The Most Basic WebElement Page." style="margin: 20px;"
+    center
+     > paragraph text="Making a basic HTML document in WebElements is easy. A few lines of python code is all that is necessary to build a complete HTML Page in the classic 'Hello World' style."
+    center
+     > headerlabel style="margin: 20px;" level=5 text="Python Code:"
+    center
+     box style="width: 600px;"
+      > codesnippet#helloWorldPython
+      > paragraph
+    center
+     > headerlabel style="margin: 20px;" level=5 text="HTML Output:"
+    center
+     box style="width: 600px;"
+      > codesnippet#helloWorldHTML lexer=html
+  tab#combiningTab text="Combining Elements"
+   vertical.StartPage
+    center
+     > headerlabel text="Adding Elements to Other Elements" style="margin: 20px;"
+    center
+     paragraph
+      > freetext text="WebElements supports creating complex trees by adding elements to other elements. You can think of each element as also being a list containing other elements. As such each element supports the common list operations such as:"
+    center
+     > label text=Appending strong=True
+    center
+     box style="width: 600px;margin:10px;"
+      > codesnippet code="element += newChildElement"
+    center
+     > label text=Removing strong=True
+    center
+     box style="width: 600px;margin:10px;"
+      > codesnippet code="element -= newChildElement"
+    center
+     > label text=Looping strong=True
+    center
+     box style="width: 600px;margin:10px;"
+      > codesnippet code="for element in elementWithLotsOfChildren:\n    print element"
+    center
+     > label text=Accessing strong=True
+    center
+     box style="width: 600px;margin:10px;"
+      > codesnippet code="firstChildElement  = element[0]"
+    center
+     > headerlabel text="Printing The Structure of an Element" style="margin: 20px;"
+    center
+     paragraph
+      > freetext text="After a complex set of elements are put together, seeing an overview of the elements structure (inluding all child elements) is as simple as printing the repr of the element."
+    center
+     > label text=Example: strong=True
+    center
+     box style="width: 600px;margin:10px;"
+      > codesnippet#combineExample
+    center
+     paragraph
+      > freetext text="Note: directly printing out an element (or doing str conversion) will result in the elements HTML output well-indented, while element.toHTML() will return compressed HTML output."
+  tab#displayingDataTab text="Displaying Data"
+   vertical.StartPage
+    center
+     > headerlabel text="Displaying Data Using Tables" style="margin: 20px;"
+    center
+     paragraph
+      > freetext text="WebElements does not allow or enable laying out a page using an HTML table element, however it does provide functionality for quickly displaying data using tables. Which is ofcourse their intended prouporse. There are two ways to populate a table with data:"
+    center
+     > label text="Adding one row at a time:" strong=True
+    center
+     box style="width: 600px;margin:10px;"
+      > codesnippet#addingRowsExample
+    center
+     > label text="Passing in a data structure with table data:" strong=True
+    center
+     box style="width: 600px;margin:10px;"
+      > codesnippet#passingDataExample
+    center
+     > label text="Both methods are functionally equivalent and produce the following table:" strong=True
+    center
+     > table#myTable style=margin:10px;
+    center
+     > headerlabel text="Changing the Order of Columns" style="margin: 20px;"
+    center
+     paragraph
+      > freetext text="While it is perferable to set the order of columns before inserting data, sometimes this is not possible and you must modify the ordering of columns right before rendering. In these cases WebElements allows you to change the ordering of the columns simply by setting the columns attribute:"
+    center
+     box style="width: 600px;margin:10px;"
+      > codesnippet#changeOrderExample
+    center
+     > label text="Which will result in the following table:" strong=True
+    center
+     > table#myTable2 style=margin:10px;
+  tab#templatesTab text="Using Templates"
+   vertical.StartPage
+    center
+     > headerlabel text="Using WebElement UI (WUI) Templates" style="margin: 20px;"
+    center
+     > paragraph text="WebElements has built in support for creating elements from template files. These templates carry the .wui extension and use - at developer discretion - either XML or SHPAML syntax. Though we recommend SHPAML for it's condensed syntax. Every element in the template must correspond to an element defined within WebElements or an installed WebElement Plug-in."
+    center
+     > paragraph text="Setting attributes on an element is the equivalent of passing an argument onto the constructor of the element. Supported arguments for each element are defined in a properties dictionary on each element. There is one exception to this rule, the 'attribute' property, which defines how to access the element directly off the template from within python."
+    center
+     > label text="Example WUI Template (Using XML syntaxt):" strong=True
+    center
+     box style="width: 800px;margin:10px;"
+      > codesnippet#xmlTemplateExample
+    center
+     > label text="Same Example (Using SHPAML syntaxt):" strong=True
+    center
+     box style="width: 800px;margin:10px;"
+      > codesnippet@shpamlTemplateExample
+    center
+     horizontal
+      > label text="For more information about SHPAML see the "
+      > link.WSpaced href=http://shpaml.com/ target=_blank text="SHPAML website."
+    center
+     > paragraph text="Note that because WebElements includes all the DOM elements and properties defined in the HTML5 spec, you can load existing HTML files unmodified - adding unique WebElement nodes only when needed." style=margin-top:20px;
+    center
+     > headerlabel text="Loading Template Files Into Python" style="margin: 20px;"
+    center
+     > paragraph text="Assuming you have saved either of the above examples into a file labeled 'example.wui', the following code will transform it into a WebElement within python:"
+    center
+     box style="width: 800px;margin:10px;"
+      > codesnippet#loadTemplateExample
+    center
+     > paragraph text="You can then access button1 or button2 directly from the ui object by doing ui.button1 (as they both have the accessor attribute set). Additionally you can loop through and print out ui just like any other WebElement."
+    center
+     > headerlabel text="Editing Templates Visually" style="margin: 20px;"
+    center
+     > paragraph text="While it's helpful to understand how templates are written and loaded behind the scenes, it's not really necessary (or expected) for you to edit template files by-hand. Instead we have built a visual template editor (called GUIBuilder) that you can use to create and edit templates in a drag and drop manor."
+    center
+     horizontal style="margin:20px; margin-bottom: 60px;"
+      > label.WSpaced text="For more information see the "
+      > link href=http://www.guibuilder.net/ target=_blank text="GUI Builder website."
+  tab#customElements text="Custom Elements"
+   vertical.StartPage
+    center
+     > headerlabel text="Creating Custom Elements" style="margin: 20px;"
+    center
+     paragraph
+      > freetext text="To create custom elements that others can use, and that can be included in templates - you must create a new module that includes a single WebElement Factory with all custom elements added to it:"
+    center
+     box style="width: 600px;margin:10px;"
+      > codesnippet#customElementExample
+    center
+     paragraph
+      > freetext text="The above is all that is necessary to create a custom WebElement factory that can be plugged-in to existing projects and used in templates. Note the property dictionary that sets up the mapping between passed in template attributes and their actions."
+    center
+     > headerlabel text="Using Custom Elements" style="margin: 20px;"
+    center
+     paragraph
+      > freetext text="The most straight foward way to use custom elements is simply to import them where needed. Once imported they then can be used just like built in WebElements. However, a common requirement is the ability to use custom elements within a WebElement User Iterface(WUI) template file. To do this you must first create a composite factory that includes the built in WebElements factory as well as any of the custom element factories you wish to include. You then must pass this factory in everytime you expand a template:"
+    center
+     box style="width: 600px;margin:10px;"
+      > codesnippet#usingCustomElementsExample
+    center
+     > headerlabel text="Template Namespaces" style="margin: 20px;"
+    center
+     paragraph
+      > freetext text="The more element factories you use, the more likely you'll run into a naming conflict: where two factories define elements with the same name. Luckily there is a namespace implementation built into WebElements for just this issue. First off, the last factory included that defines the element name controls it. Secondly, you can access either element by writting your tag as factoryname-elementname, where the '-' separates the factories name and the element's name."
+  tab#integrationTab text="Integrating WebElements"
+   vertical.StartPage
+    center
+     > headerlabel text="Integrating WebElements Into Your Stack" style="margin: 20px;"
+    center
+     paragraph
+      > freetext text="Once you get comfortable with the WebElements API we are sure you will see the many benefits it provides and want to use it in your own projects. There are many avenues to integrating WebElements into web development stacks. The most obvious is to simply to use the WebElements API to produce raw HTML and return that HTML in your frameworks request handlers. If you use this approach, we reccommend you also include the WebElement css file and Javascript file found on our github project page, as well as adding the few images used by WebElements to your static projects static images directory:"
+    center
+     > link text="Download WebElements CSS File" href=https://raw.github.com/timothycrosley/webelements/master/Static/stylesheets/WebElements.css
+    center
+     > link text="Download WebElements Javascript File" href=https://raw.github.com/timothycrosley/WebBot/master/resources/js/WebBot.js
+    center
+     > link href=https://github.com/timothycrosley/webelements/tree/master/Static/images target=_blank text="Image Files"
+    center
+     paragraph
+      > freetext text="However, our recommended approach is to use WebBot to create a project that automatically integrates WebElements and DynamicForm (A request handling abstraction library) on top of common web frameworks (such as AppEngine and Django). This has the benefit of providing DynamicForm's ajax abstraction abilities right out of the box, as well as providing a known configuration to support plug-in installation."
+    center
+     > link href=http://www.webbot.ws/ target=_blank text="Open the WebBot Site"

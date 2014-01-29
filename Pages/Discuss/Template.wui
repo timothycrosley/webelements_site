@@ -1,0 +1,12 @@
+vertical
+ vertical.StartPage
+  > linebreak
+  center
+   > headerlabel style=padding:20px; level=1 text="Discuss WebElements"
+  center
+   paragraph
+    > freetext text="In order to be able to support users of the WebElements python library, and encourage more developers to contribute to the project (We could always use more contributers!) we have set up a google groups forum for discussing the API. Additionally you can report any issues you find, or suggest new features on our github issues page."
+  center
+   > link href=https://groups.google.com/forum/?fromgroups=#!forum/webelements target=_blank text="Google Group Forum"
+  center
+   > link text="GitHub Issues Page" href=https://github.com/timothycrosley/webelements/issues?state=open

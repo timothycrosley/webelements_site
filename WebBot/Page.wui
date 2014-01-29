@@ -1,0 +1,25 @@
+flow
+ document@document profile=http://www.w3.org/2005/10/profile title="Web Elements - A collection of python objects that represent web building blocks."
+  > resourcefile file=images/favicon.png
+  > resourcefile file=js/WebBot.js
+  > resourcefile file=stylesheets/Site.css
+  vertical
+   horizontal.MenuBar
+    link#homeButton href=Home
+     > image#logo src=images/logo.png
+     > label text=WebElements
+    > horizontal#pageLinks
+    horizontal.WRight
+     > label.WSpaced text="Latest Version:"
+     link.WSpaced href=Download
+      > freetext@version
+    > horizontal
+   box#body style=border:0px;margin:0px;padding:0px;
+    > box#pageContents
+   center#footer
+    horizontal style="line-height: 50px;"
+     link href=http://www.simpleinnovation.org target=_blank
+      > image src=images/simpleinnovation_badge.png
+     link href=http://www.webbot.ws/ target=_blank
+      > image src=images/webbot_badge.png
+     > copyright owner="Simple Innovation LLC"

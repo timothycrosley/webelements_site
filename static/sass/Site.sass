@@ -1,0 +1,102 @@
+@import "WebBot"
+@import "compass"
+body
+    background-image: url('../images/tile.png')
+    background-repeat: repeat
+
+#pageHeader
+    padding-bottom: 10px
+#footer
+    padding-top: 20px
+    padding-bottom: 10px
+    font-size: 1.2em
+.IndentedContent
+    padding: 10px
+
+@mixin smallScreen
+    body
+        overflow-x: hidden
+
+
+.StartPage
+    p
+        width: 800px
+        margin: 10px
+
+.MenuBar
+    #pageLinks
+        margin-left: 80px
+        a
+            margin-left: 5px
+    height: 40px
+    line-height: 40px
+    @include background-image(linear-gradient(#3ca4d0, #306bae))
+    border-bottom: 1px black solid
+    color: white
+
+    a
+        color: #aec9d4
+        &:hover
+            color: white
+            text-decoration: none
+
+    #homeButton
+        #logo
+            height: 40px
+            padding-right: 10px
+        label
+            cursor: pointer
+
+.Section
+    margin-top: 10px
+    margin: 50px
+
+#intro
+    font-size: 70px
+    #web
+        margin: 10px
+        color: gray
+    #elements
+        margin: 10px
+        color: black
+    #tagline
+        margin: 10px
+        margin-left: 40px
+        font-size: 25px
+.WAccordion
+    div.WToggle
+        label
+            cursor: pointer
+        padding: 2px
+        @include background-image(linear-gradient(#3ca4d0, #306bae))
+        color: white
+        border-bottom: 1px black solid
+        &:hover
+            @include background-image(linear-gradient(darken(#3ca4d0, 20%), darken(#306bae, 20%)))
+.Products
+    +border-radius(10px, 10px)
+    border: 1px black solid
+    .First
+        .WToggle
+            +border-top-radius(8px)
+    .Last
+        .WToggle
+            +border-bottom-radius(8px)
+    .Results
+        +border-radius(10px, 10px)
+.Document
+    width: 70%
+    min-width: 650px
+    margin: 20px
+    border: 1px gray solid
+    padding: 10px
+    background: white
+    +border-radius(10px 10px)
+    +single-box-shadow
+select
+    background: white
+
+@media screen and (max-width: 640px)
+    @include smallScreen
+@media screen and (max-device-width: 640px)
+    @include smallScreen

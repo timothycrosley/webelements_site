@@ -1,0 +1,46 @@
+box
+ vertical.IndentedContent.StartPage
+  center
+   horizontal#intro
+    > image src=images/largelogo.png
+    vertical
+     horizontal
+      > label#web text=Web
+      > label#elements text=Elements
+     > label#tagline text="Python Building Blocks for the Web"
+  center
+   paragraph
+    > freetext text="WebElements is a collection of python objects that enable developers to generate and interact with web apps server side. It encourages object oriented website development, and code reuse by seperating each DOM element into its own object, and then allowing inheritance and child elements to come together to form new elements not defined in the standard DOM."
+  center
+   > headerlabel text="Write This:" level=5
+  center
+   > codesnippet#exampleCode style="width: 800px;"
+  center
+   > headerlabel style="margin: 10px;" level=5 text="Get This:"
+  center
+   > codesnippet#exampleOutput style="width: 800px;" lexer=html
+  center
+   > headerlabel style="margin-top: 50px;" level=2 text="HTML5 Support Baked In."
+  center
+   horizontal.Section
+    vertical style="margin: 50px; margin-right: 0px; padding-top: 30px;"
+     paragraph style="width: 500px;"
+      > freetext text="WebElements has at its base a full server-side implementation of all HTML5 nodes, and it comes with elements specifically built with HTML5 in mind. It also forces syntactically correct HTML5 output - so you can rest assured your web app is future proof."
+    > image src=images/html5.png style=margin:0px;
+  center
+   > headerlabel text="Best In-Class Performance." level=2
+  center
+   horizontal
+    > image src=images/performance.png
+    paragraph style="padding:10px; width: 600px"
+     > freetext text="All the most advanced features in the world, and ease of development WebElements provides would be useless if it decreased your websites performance and drove customers elsewhere. That is why we constantly work hard to ensure WebElements performs well now and will continue to in the future. Before every release we put WebElements through an intensive set of benchmarks, and if it doesn't perform at least as well as its last release - we go back to the drawing board. This has resulted in spectacular performance that beats even simple templating languages."
+  center
+   > headerlabel style="margin-top: 50px;" level=2 text="One Language to Rule Them All."
+  center
+   horizontal
+    paragraph style="padding: 50px; width: 600px"
+     > freetext text="One of the hardest things about traditional web development is the need to constantly mentally context-switch - as you move from editing server-side code, HTML, JavaScript,  and CSS. WebElements is different. Write 100% Python code that then generates the HTML, Javascript and CSS that runs your site. "
+    > image src=images/python.png
+  center
+   link href=Download
+    > button.MainAction style="padding: 20px; font-size: 200%;margin: 50px;" text="Download WebElements Now!"

@@ -1,0 +1,18 @@
+flow
+ vertical.Start
+  center
+   > headerlabel text="Installing WebElements" style=padding:20px;
+  center
+   > label text="Installing webelements onto a system that is running python is as easy as running:"
+  center
+   box style="width: 700px;margin:10px;"
+    > codesnippet code="pip install webelements"
+  layout-center
+   > label text="Or If you prefer:"
+  center
+   box style="width: 700px;margin:10px;"
+    > codesnippet code="easy install webelements"
+  center
+   box style="padding: 20px;"
+    label text="Additionally you can find packages, as well as the most up to date development code over at our "
+     > link href=https://github.com/timothycrosley/webelements target=_blank text="github page."

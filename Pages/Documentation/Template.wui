@@ -1,0 +1,9 @@
+vertical
+ horizontal style="margin-top: 20px; margin-left: 20px; min-width: 1000px;"
+  vertical style=width:250px;
+   layout-field text=Search: style=line-height:30px;
+    > textbox#search placeholder="API Doc Name..."
+   vertical.Products
+    > label@results text="Results go here."
+  box.Document style=overflow:auto;
+   > label#document text="Document goes here."
